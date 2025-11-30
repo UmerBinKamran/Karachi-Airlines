@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karachi Airlines - Fly High, Fly Home</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="logo">
+        <img
+          height="100"
+          width="150"
+          src="img/Air-removebg-preview.png"
+          alt=""
+        />
+      </div>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#booking">Book Flight</a></li>
+          <li><a href="#deals">Special Offers</a></li>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#services">Travel Services</a></li>
+        </ul>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle Navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="mobile-nav" id="mobileMenu">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#booking">Book Flight</a></li>
+          <li><a href="#deals">Special Offers</a></li>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#services">Travel Services</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero-section" id="home">
+      <div class="hero-content">
+        <h1>Experience the Skies of Sindh</h1>
+        <p>Your trusted partner for domestic and international travel.</p>
+        <div class="flight-search-box" id="booking">
+          <h2>Find Your Flight</h2>
+          <form>
+            <div class="trip-type-group">
+              <input
+                type="radio"
+                id="roundTrip"
+                name="tripType"
+                value="roundTrip"
+                checked
+              />
+              <label for="roundTrip">Round Trip</label>
+              <input type="radio" id="oneWay" name="tripType" value="oneWay" />
+              <label for="oneWay">One Way</label>
+            </div>
+
+            <div class="input-row">
+              <div class="form-group">
+                <label for="from">From:</label>
+                <select id="from" name="from">
+                  <option value="KHI">Karachi (KHI)</option>
+                  <option value="ISB">Islamabad (ISB)</option>
+                  <option value="LHR">Lahore (LHR)</option>
+                  <option value="PEW">Peshawar (PEW)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="to">To:</label>
+                <input
+                  type="text"
+                  id="to"
+                  name="to"
+                  placeholder="City or Airport Code"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="input-row">
+              <div class="form-group">
+                <label for="depDate">Departure Date:</label>
+                <input type="date" id="depDate" name="depDate" required />
+              </div>
+              <div class="form-group return-date">
+                <label for="retDate">Return Date:</label>
+                <input type="date" id="retDate" name="retDate" />
+              </div>
+              <div class="form-group passenger-count">
+                <label for="passengers">Passengers:</label>
+                <input
+                  type="number"
+                  id="passengers"
+                  name="passengers"
+                  min="1"
+                  max="9"
+                  value="1"
+                  required
+                />
+              </div>
+            </div>
+
+            <button type="submit" class="btn-primary">Search Flights</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="deals-section" id="deals">
+      <h2>Limited-Time Special Offers</h2>
+      <div class="deals-grid">
+        <div class="deal-card">
+          <h3>Family Package Discount</h3>
+          <p>
+            20% off for bookings of 4 or more passengers to any domestic
+            destination.
+          </p>
+          <a href="#" class="btn-secondary">Book Now</a>
+        </div>
+        <div class="deal-card">
+          <h3>Business Class Upgrade</h3>
+          <p>Flat 10% discount on all Business Class tickets to Dubai (DXB).</p>
+          <a href="#" class="btn-secondary">View Details</a>
+        </div>
+        <div class="deal-card">
+          <h3>Weekend Getaway to Islamabad</h3>
+          <p>
+            Special low fares for Friday to Sunday flights. Starting from PKR
+            15,000.
+          </p>
+          <a href="#" class="btn-secondary">Check Fares</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="destinations-section" id="destinations">
+      <h2>Popular Destinations</h2>
+      <div class="destination-grid">
+        <div class="card">
+          <h3>Dubai</h3>
+          <p>The global hub for commerce and luxury.</p>
+        </div>
+        <div class="card">
+          <h3>London</h3>
+          <p>Explore the historic heart of the UK.</p>
+        </div>
+        <div class="card">
+          <h3>Islamabad</h3>
+          <p>The beautiful capital city of Pakistan.</p>
+        </div>
+        <div class="card">
+          <h3>Jeddah</h3>
+          <p>Gateway to the holy cities.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-section" id="services">
+      <h2>Travel Services</h2>
+      <div class="service-list">
+        <div class="service-item detail-box">
+          <i class="fas fa-suitcase-rolling"></i>
+          <h3>Baggage Information</h3>
+          <p>
+            Detailed policies for checked and cabin luggage, including excess
+            weight charges.
+          </p>
+          <ul class="baggage-details">
+            <li>**Economy:** 20kg Checked, 7kg Cabin</li>
+            <li>**Business:** 30kg Checked, 10kg Cabin</li>
+          </ul>
+          <a href="#" class="service-link">View Full Policy</a>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-chair"></i>
+          <h3>Seat Selection</h3>
+          <p>Choose your perfect spot for a comfortable journey.</p>
+        </div>
+        <div class="service-item">
+          <i class="fas fa-utensils"></i>
+          <h3>In-Flight Meals</h3>
+          <p>Diverse menu options for every dietary need.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials-section" id="testimonials">
+      <h2>What Our Passengers Say</h2>
+      <div class="testimonial-slider-container">
+        <div class="testimonial-slider">
+          <div class="testimonial-slide">
+            <p>
+              "Seamless journey from Karachi to London. On-time departure and
+              excellent cabin service. Highly recommended!"
+            </p>
+            <div class="author">- Ahmed K., Lahore</div>
+          </div>
+          <div class="testimonial-slide">
+            <p>
+              "The best domestic airline experience. The staff was incredibly
+              courteous and the booking process was simple."
+            </p>
+            <div class="author">- Sara B., Karachi</div>
+          </div>
+          <div class="testimonial-slide">
+            <p>
+              "Flew business class to Dubai—the food was fantastic and the seat
+              comfort was superb. Will fly with Karachi Airlines again."
+            </p>
+            <div class="author">- Faisal M., Islamabad</div>
+          </div>
+        </div>
+        <button class="prev-btn" aria-label="Previous Testimonial">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="next-btn" aria-label="Next Testimonial">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <footer class="main-footer" id="contact">
+      <div class="footer-content">
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p><i class="fas fa-phone"></i> +92 21 1234567</p>
+          <p><i class="fas fa-envelope"></i> info@karachiair.com</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2024 Karachi Airlines. All rights reserved.
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
